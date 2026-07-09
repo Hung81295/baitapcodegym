@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bài 10</title>
+</head>
+<body>
+<script>
+  let soDien = Number(prompt("Nhập số điện đã sử dụng: "));
+  let donGia;
+  let tongTien;
+
+  if(soDien<=0){
+    console.log(`Số kWh không hợp lệ!`)
+  }else{
+    if (soDien <= 50) {
+      donGia=1678;
+    }else  if(soDien<=100){
+      donGia=1734;
+    }else if(soDien<=200){
+      donGia=2014;
+    }else if(soDien<=300){
+      donGia=2536;
+    }else {
+      donGia = 2834;
+    }
+    tongTien=soDien*donGia;
+    console.log(`
+Số kWh đã dùng: ${soDien}
+Đơn giá: ${donGia.toLocaleString('vi-VN')}đ/kWh
+Tổng tiền: ${tongTien.toLocaleString('vi-VN')}đ`);
+  }
+</script>
+</body>
+</html>
