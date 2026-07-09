@@ -8,7 +8,13 @@
 <script>
   let a=Number(prompt("Nhập số thứ nhất"));
   let b=Number(prompt("Nhập số thứ hai"));
+  if(a===0){
+    if(b===0){
+      alert("Phương trình vô số nghiệm")
+    }else {"Phương trình vô nghiệm"}
+  }else {
   alert(`Kết quả là:${-b/a}`);
+  }
 </script>
 </body>
 </html>
