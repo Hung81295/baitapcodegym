@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bài 11</title>
+</head>
+<body>
+<script>
+  let thuNhap=Number(prompt("Nhập tổng thu nhập(triệu)"));
+  let thue;
+if(thuNhap<0){
+  alert("Giá trị không đúng")
+}
+  if(thuNhap<5){
+   thue=0;
+  } else if (thuNhap<10){
+ thue=5;
+  }else if(thuNhap<18){
+    thue=10;
+  }else if(thuNhap<32){
+    thue=15;}
+  else if(thuNhap<52){
+    thue=20;}
+  else {
+    thue=25
+  }
+  let thucLinh=thuNhap-thuNhap*thue/100;
+  alert(`Thu nhập là ${thucLinh.toLocaleString('vi-VN')}`)
+</script>
+</body>
+</html>
